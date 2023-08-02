@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* h1  {
-  background-color: red;
-} */
-
 .text-4xl {
   font-size: 3rem;
   line-height: 2.5rem;
@@ -22,7 +18,6 @@
 .bigBox {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   background-color: #86eeac;
   padding: 1rem;
   width: 70%;
