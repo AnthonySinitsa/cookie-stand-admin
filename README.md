@@ -8,6 +8,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
+## a note about current site 8/2/23
+
+there are hard coded values but u won't see them initially, you must add a cookie stand to see the values. However the new cookie stand won't be displayed
+
 ##
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
