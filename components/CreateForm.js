@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { hours } from '../data'; // Check the correct relative path to data.js
+import { hours } from '../data';
 
 export default function CreateForm({ onLocationCreate }) {
-  const [locationName, setLocationName] = useState('');
+  const [locationName, setLocationName] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,9 +16,11 @@ export default function CreateForm({ onLocationCreate }) {
   };
 
   const handleLocationChange = (event) => {
+    console.log(event)
     setLocationName(event.target.value);
   };
 
+  console.log(locationName)
   return (
     <div className="bigBox">
       <h2 className="createCookie">Create Cookie Stand</h2>

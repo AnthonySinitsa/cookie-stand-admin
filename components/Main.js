@@ -1,13 +1,15 @@
-//USE ME
+import React, { useState } from 'react';
+
 import CreateForm from '@/components/CreateForm';
 import ReportTable from '@/components/ReportTable';
-import { useState } from 'react';
+
 
 export default function Main({ locations }) {
-  const [cookieStands, setCookieStands] = useState([]); // State to store the list of cookie stands
+  const [cookieStands, setCookieStands] = useState([]);
 
   const handleLocationCreate = (newLocation) => {
-    setCookieStands([...cookieStands, newLocation]); // Add the new location to the list of cookie stands
+    setCookieStands([...cookieStands, newLocation]);
+    locations = cookieStands.length + 1;
   };
 
   return (
@@ -21,4 +23,3 @@ export default function Main({ locations }) {
     </div>
   );
 }
-
