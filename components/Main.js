@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-
 import CreateForm from '@/components/CreateForm';
 import ReportTable from '@/components/ReportTable';
+import { locations } from '@/components/CreateForm'
+import { useState } from 'react';
 
 
 export default function Main({ locations }) {
@@ -9,7 +9,6 @@ export default function Main({ locations }) {
 
   const handleLocationCreate = (newLocation) => {
     setCookieStands([...cookieStands, newLocation]);
-    locations = cookieStands.length + 1;
   };
 
   return (

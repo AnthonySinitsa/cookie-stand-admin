@@ -12,7 +12,7 @@ export default function LoginForm() {
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="password">
             Password
           </label>
-          <input className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+          <input className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="***************" />
           <p className="text-xs italic text-red-500">Please choose a password.</p>
         </div>
         <div className="flex items-center justify-between">
