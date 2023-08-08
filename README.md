@@ -8,7 +8,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-vercel [https://cookie-stand-api-psi.vercel.app](https://cookie-stand-api-psi.vercel.app)
+vercel api [https://cookie-stand-api-psi.vercel.app](https://cookie-stand-api-psi.vercel.app)
+
+vercel admin [https://cookie-stand-admin-blue.vercel.app](https://cookie-stand-admin-blue.vercel.app)
 
 USERNAME: admin
 
@@ -16,7 +18,7 @@ PASSWORD: admin
 
 ## Collaborators
 
-Dan Quinn, Sarah Glass, Jared Ciccarello, Logan Reese
+Dan Quinn, Sarah Glass, Jared Ciccarello, Logan Reese, Slava Makeev
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
