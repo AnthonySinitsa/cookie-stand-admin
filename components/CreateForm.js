@@ -1,49 +1,45 @@
 import { useState } from 'react';
-import { hours } from '../data';
+import { hours } from '../data'; 
 
 export default function CreateForm({ onLocationCreate }) {
-  const [locationName, setLocationName] = useState([]);
+  const [locationName, setLocationName] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const hourlySales = hours.map(() => Math.floor(Math.random() * 100)); // Generate random sales for each hour
+
+    const hourlySales = hours.map(() => Math.floor(Math.random() * 100)); 
+
     const newLocation = {
       location: locationName,
       hourly_sales: hourlySales,
     };
-    onLocationCreate(newLocation); // Callback to the parent component to handle the new location
-    setLocationName(''); // Clear the input field after submission
+    onLocationCreate(newLocation);
+    setLocationName(''); 
   };
 
   const handleLocationChange = (event) => {
-    console.log(event)
     setLocationName(event.target.value);
   };
 
-  console.log(locationName)
   return (
-    <div className="bigBox">
-      <h2 className="createCookie">Create Cookie Stand</h2>
+    <div className="formBox">
+      <h2 className="createCookieStand">Create Cookie Stand</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <label className="firstLabel" htmlFor="location">
-          Location
-        </label>
+        <label className="locationLabel" htmlFor="location">Location</label>
         <input
-          className="firstInput"
+          className="locationInput"
           type="text"
           value={locationName}
           onChange={handleLocationChange}
         />
-        <div className="threeFormButton">
-          <label htmlFor="minimum-customer-per-hour">Minimum Customers per Hour</label>
+        <div className="formContents">
+          <label htmlFor="min-customer-per-hour">Minimum Customers per Hour</label>
           <input className="input" type="number" />
-          <label htmlFor="maximum-customer-per-hour">Maximum Customer per Hour</label>
+          <label htmlFor="max-customer-per-hour">Maximum Customer per Hour</label>
           <input className="input" type="number" />
-          <label htmlFor="average-cookies-per-sale">Average Cookies per Sale</label>
+          <label htmlFor="avg-cookies-per-sale">Average Cookies per Sale</label>
           <input className="input" type="number" />
-          <button className="button" type="submit">
-            Create
-          </button>
+          <button className="createButton" type="submit">Create</button>
         </div>
       </form>
     </div>
