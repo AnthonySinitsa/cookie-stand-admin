@@ -8,7 +8,11 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-##
+vercel [https://cookie-stand-api-psi.vercel.app](https://cookie-stand-api-psi.vercel.app)
+
+## Collaborators
+
+Dan Quinn, Sarah Glass, Jared Ciccarello, Logan Reese
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
