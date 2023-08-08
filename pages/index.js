@@ -17,19 +17,18 @@ export default function Home() {
       <CookieStandAdmin />
     
       <main className="p-4 space-y-8 text-center">
-        <h1 className="text-4xl">Fetching Data from Authenticated API</h1>
-        <button className="p-2 text-white bg-gray-500 rounded">Login</button>
+        {/* <h1 className="text-4xl">Fetching Data from Authenticated API</h1> */}
+        {/* <button className="p-2 text-white bg-gray-500 rounded">Login</button> */}
         {user ? (
             <>
-              <h2>Welcome {user.username}</h2>
-              <button onClick={logout} className="p-2 text-white bg-gray-500 rounded">Logout</button>
+              <h2>Welcome </h2>
+              {/* <button onClick={logout} className="p-2 text-white bg-gray-500 rounded">Logout</button> */}
               <StandCreateForm onCreate={createResource} />
               <StandList stands={resources} loading={loading} onDelete={deleteResource} />
             </>
         ) : (
           <>
-            <h2>Need to log in</h2>
-            <LoginForm onLogin={login} />
+            {/* <h2>Need to log in</h2> */}
           </>
         )}
 
@@ -37,27 +36,6 @@ export default function Home() {
     </div>
 
   );
-}
-
-
-function LoginForm({ onLogin }) {
-
-  async function handleSubmit(event) {
-      event.preventDefault();
-      onLogin(event.target.username.value, event.target.password.value);
-  }
-
-return (
-  <form onSubmit={handleSubmit}>
-      <fieldset autoComplete='off'>
-          <label htmlFor="username">Username</label>
-          <input name="username" />
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" />
-          <button>Log In</button>
-      </fieldset>
-  </form>
-);
 }
 
 function StandList({ stands, loading, onDelete }) {
