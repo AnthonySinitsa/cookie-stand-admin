@@ -10,6 +10,10 @@ Open [http://localhost:3000](http://localhost:3000)
 
 vercel [https://cookie-stand-api-psi.vercel.app](https://cookie-stand-api-psi.vercel.app)
 
+USERNAME: admin
+
+PASSWORD: admin
+
 ## Collaborators
 
 Dan Quinn, Sarah Glass, Jared Ciccarello, Logan Reese
