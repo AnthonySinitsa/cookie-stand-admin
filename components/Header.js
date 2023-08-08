@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import React from 'react';
 
 export default function Header() {
   return (
-    <header className="header">
-      <h1 className="text-3xl" style={{ fontFamily: 'Arial' }}>Cookie Stand Admin</h1>
-      <a href="/overview"><button className="overviewButton" type="button">Overview</button></a>
+    <header className="relative flex items-center justify-between bg-green-500 p-7 text-black-80">
+      <h1 className="text-5xl">Cookie Stand Admin</h1>
+      <div className="absolute top-0 left-0 w-full h-2 bg-black"></div>
     </header>
   );
 }

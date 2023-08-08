@@ -1,24 +1,23 @@
-import CreateForm from '@/components/CreateForm';
-import ReportTable from '@/components/ReportTable';
-import { locations } from '@/components/CreateForm'
-import { useState } from 'react';
+import React from 'react';
+import CreateForm from './CreateForm';
+import ReportTable from './ReportTable';
 
-
-export default function Main({ locations }) {
-  const [cookieStands, setCookieStands] = useState([]);
-
-  const handleLocationCreate = (newLocation) => {
-    setCookieStands([...cookieStands, newLocation]);
-  };
-
+export default function Main({ onFormSubmit, data }) {
   return (
-    <div className="main">
-      <CreateForm onLocationCreate={handleLocationCreate} />
-      {cookieStands.length > 0 ? (
-        <ReportTable cookieStands={cookieStands} />
+    <>
+      <div className="container p-4 mx-auto">
+        <h2 className="mb-4 text-3xl font-bold text-center" style={{ fontFamily: 'Arial' }}>
+          Create Cookie Stand
+        </h2>
+        <CreateForm onFormSubmit={onFormSubmit} />
+      </div>
+      {data.length > 0 ? (
+        <ReportTable data={data} />
       ) : (
-        <p>No Cookie Stands Available</p>
+        <p className="mt-4 text-3xl text-center" style={{ fontFamily: 'Arial' }}>
+          No Cookie Stands Available...
+        </p>
       )}
-    </div>
+    </>
   );
 }

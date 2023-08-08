@@ -1,15 +1,24 @@
-import Head from '@/components/Head';
-import Header from '@/components/Header';
-import Main from '@/components/Main';
-import Footer from '@/components/Footer';
+import React, { useState } from 'react';
+import { hours } from '../data';
 
-export default function CookieStandAdmin({ locations = 5 }) {
+import Header from './Header';
+import Head from './Head';
+import Footer from './Footer';
+import Main from './Main';
+
+export default function CookieStandAdmin() {
+  const [cookieStandData, setCookieStandData] = useState([]);
+
+  const handleFormSubmit = (formData) => {
+    setCookieStandData([...cookieStandData, formData]);
+  };
+
   return (
     <div>
       <Head />
       <Header />
-      <Main  />
-      <Footer locations={locations} />
+      <Main onFormSubmit={handleFormSubmit} data={cookieStandData} />
+      <Footer locations={cookieStandData.length} />
     </div>
   );
 }
